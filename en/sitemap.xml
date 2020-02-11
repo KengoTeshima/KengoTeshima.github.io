@@ -3,44 +3,44 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://KengoTeshima.github.io/en/categories/</loc>
+    <loc>https://KengoTeshima.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
+                href="https://KengoTeshima.github.io/ja/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="https://KengoTeshima.github.io/categories/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://KengoTeshima.github.io/en/categories/"
-                />
   </url>
   
   <url>
-    <loc>https://KengoTeshima.github.io/en/</loc>
+    <loc>https://KengoTeshima.github.io/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
+                href="https://KengoTeshima.github.io/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
                 href="https://KengoTeshima.github.io/"
                 />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://KengoTeshima.github.io/en/"
-                />
   </url>
   
   <url>
-    <loc>https://KengoTeshima.github.io/en/tags/</loc>
+    <loc>https://KengoTeshima.github.io/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="ja"
-                href="https://KengoTeshima.github.io/tags/"
+                href="https://KengoTeshima.github.io/ja/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="en"
-                href="https://KengoTeshima.github.io/en/tags/"
+                href="https://KengoTeshima.github.io/tags/"
                 />
   </url>
   
