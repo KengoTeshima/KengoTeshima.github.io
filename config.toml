@@ -72,9 +72,15 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
 [[params.social]]
     # If icon is not set, Text is displayed.
     name = "Qiita"
-    icon = "fab icon-qiita fa-2x"
+    # icon = "fab icon-qiita fa-2x"
     weight = 4
     url = "https://qiita.com/ognek"
+[[params.social]]
+    # If icon is not set, Text is displayed.
+    name = "note"
+    # icon = "fab icon-note fa-2x"
+    weight = 5
+    url = "https://note.com/ognek4"
 
 # Menu links
 [[menu.main]]
