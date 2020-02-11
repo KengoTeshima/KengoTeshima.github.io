@@ -1,8 +1,8 @@
-baseurl = "https://KengoTeshima.github.io/""http://www.example.com" # Hostname (and path) to the root.
+baseurl = "https://KengoTeshima.github.io/" # Hostname (and path) to the root.
 title = "Kengo Teshima" # Site title.
-theme = "coder-portfolio" # Set the theme.
-languagecode = "ja-jp" # The site’s language code used to generate RSS.
-defaultcontentlanguage = "ja-jp" # The default content language.
+theme = "hugo-coder" # Set the theme.
+languagecode = "ja" # The site’s language code used to generate RSS.
+defaultcontentlanguage = "ja" # The default content language.
 
 paginate = 20 # Default number of pages per page in pagination.
 
