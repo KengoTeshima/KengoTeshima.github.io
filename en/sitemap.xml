@@ -3,31 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://KengoTeshima.github.io/about/about/</loc>
-    <lastmod>2020-02-11T22:00:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://KengoTeshima.github.io/about/</loc>
-    <lastmod>2020-02-11T22:00:55+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://KengoTeshima.github.io/</loc>
-    <lastmod>2020-02-11T22:00:55+09:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="ja"
-                href="https://KengoTeshima.github.io/ja/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://KengoTeshima.github.io/"
-                />
-  </url>
-  
-  <url>
     <loc>https://KengoTeshima.github.io/categories/</loc>
     <xhtml:link
                 rel="alternate"
@@ -38,6 +13,20 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://KengoTeshima.github.io/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://KengoTeshima.github.io/</loc>
+    <xhtml:link
+                rel="alternate"
+                hreflang="ja"
+                href="https://KengoTeshima.github.io/ja/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://KengoTeshima.github.io/"
                 />
   </url>
   
