@@ -1,0 +1,9 @@
+baseurl = "https://kengoteshima.github.io/hugo-test/"
+title = "KengoTeshima's Pages"
+author = "KengoTeshima"
+canonifyurls = true
+paginate = 3
+theme = "hugo-coder"
+publishDir = "docs"
+hasCJKLanguage = true
+languageCode = "ja-jp"
