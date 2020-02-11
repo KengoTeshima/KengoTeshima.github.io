@@ -3,7 +3,7 @@ title = "Kengo Teshima" # Site title.
 theme = "hugo-coder" # Set the theme.
 languagecode = "ja" # The site’s language code used to generate RSS.
 defaultcontentlanguage = "ja" # The default content language.
-
+publishdir =  "docs"
 
 paginate = 20 # Default number of pages per page in pagination.
 
