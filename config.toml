@@ -4,6 +4,6 @@ author = "KengoTeshima"
 canonifyurls = true
 paginate = 3
 theme = "hugo-coder"
-publishDir = "content"
+publishDir = "docs"
 hasCJKLanguage = true
 languageCode = "ja-jp"
