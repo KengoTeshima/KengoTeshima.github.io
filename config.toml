@@ -86,7 +86,7 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
     name = "youtube"
     icon = "fab fa-youtube"
     weight = 6
-    url = ""
+    url = "https://www.youtube.com/playlist?list=PLJ99EoR4L7qpXqnpsdYQrJe_VCxVowkko"
 
 # Menu links
 [[menu.main]]
@@ -116,6 +116,11 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
         name = "About"
         weight = 1.0
         url = "about"
+
+        [[languages.en.menu.main]]
+        name = "Contents"
+        weight = 1.0
+        url = "contents"
 
         [[languages.en.menu.main]]
         name = "Blog"
