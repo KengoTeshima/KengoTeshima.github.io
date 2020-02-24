@@ -8,6 +8,7 @@
     background-color: rgb(0,0,0);
     vertical-align: middle;
 }
+
 .icon-note:before {
     content: "";
     background-image: url("/images/note.svg");
