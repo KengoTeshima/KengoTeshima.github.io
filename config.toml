@@ -51,7 +51,7 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
     thumbnail = "images/tn.png" # default sns thumbnail
 
     # Multilanguage mode
-    langseparator = "|" # Separates menus from language selectors when site is multilingual.
+    # langseparator = "|" # Separates menus from language selectors when site is multilingual.
 
 # Social links
 [[params.social]]
@@ -81,22 +81,22 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
     # icon = "fab icon-note"
     weight = 5
     url = "https://note.com/ognek4"
-[[params.social]]
-    # If icon is not set, Text is displayed.
-    name = "youtube"
-    icon = "fab fa-youtube"
-    weight = 6
-    url = "https://www.youtube.com/playlist?list=PLJ99EoR4L7qpXqnpsdYQrJe_VCxVowkko"
+# [[params.social]]
+#    # If icon is not set, Text is displayed.
+#    name = "youtube"
+#    icon = "fab fa-youtube"
+#    weight = 6
+#    url = "https://www.youtube.com/playlist?list=PLJ99EoR4L7qpXqnpsdYQrJe_VCxVowkko"
 
 # Menu links
-[[menu.main]]
-    name = "Blog"
-    weight = 1
-    url  = "posts"
 [[menu.main]]
     name = "About"
     weight = 2
     url = "about"
+[[menu.main]]
+    name = "Contents"
+    weight = 2
+    url = "contents"
 
 [languages]
     [languages.en]
@@ -122,11 +122,6 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
         weight = 1.0
         url = "contents"
 
-        [[languages.en.menu.main]]
-        name = "Blog"
-        weight = 2.0
-        url = "posts"
-
 
     [languages.ja]
         languagename = "Japanese"
@@ -143,9 +138,9 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
             [[languages.ja.menu.main]]
             name = "About"
             weight = 1.0
-            url = "ja/about"
+            url = "about"
 
             [[languages.ja.menu.main]]
-            name = "Blog"
+            name = "Contents"
             weight = 2.0
-            url = "ja/posts"
+            url = "contents"
