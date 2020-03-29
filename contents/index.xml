@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Abouts on Kengo Teshima</title>
-    <link>https://KengoTeshima.github.io/about/</link>
-    <description>Recent content in Abouts on Kengo Teshima</description>
+    <link>https://KengoTeshima.github.io/contents/</link>
+    <description>Recent contents on Kengo Teshima</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
     <lastBuildDate>Tue, 11 Feb 2020 22:00:55 +0900</lastBuildDate>
@@ -12,11 +12,11 @@
     
     
     <item>
-      <title>About</title>
-      <link>https://KengoTeshima.github.io/about/page/</link>
+      <title>Contents</title>
+      <link>https://KengoTeshima.github.io/contents/</link>
       <pubDate>Tue, 11 Feb 2020 22:00:55 +0900</pubDate>
       
-      <guid>https://KengoTeshima.github.io/about/page/</guid>
+      <guid>https://KengoTeshima.github.io/about/about/</guid>
       <description>about  test  </description>
     </item>
     
