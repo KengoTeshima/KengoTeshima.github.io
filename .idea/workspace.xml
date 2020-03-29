@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b9260752-b154-4547-b98d-5c03a96eb634" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/docs/contents/index.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/about/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/docs/about/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/about/index.xml" beforeDir="false" afterPath="$PROJECT_DIR$/docs/about/index.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/index.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/page/1/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/test/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/categories/test/page/1/index.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,11 +12,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config.toml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="140" column="24" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="24" />
+            <state relative-caret-position="535">
+              <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
             </state>
           </provider>
         </entry>
@@ -31,8 +24,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/about/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-461">
-              <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
+            <state relative-caret-position="202">
+              <caret line="105" column="12" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -78,13 +71,13 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/about/index.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+            <state relative-caret-position="306">
+              <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/sitemap.xml">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
@@ -97,8 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/docs/contents/index.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+            <state relative-caret-position="272">
+              <caret line="19" selection-start-line="18" selection-start-column="54" selection-end-line="19" />
             </state>
           </provider>
         </entry>
@@ -148,8 +141,8 @@
     <findStrings>
       <find>avatar</find>
       <find>posts</find>
-      <find>blog</find>
       <find>about</find>
+      <find>blog</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -170,9 +163,9 @@
         <option value="$PROJECT_DIR$/content/about/about.md" />
         <option value="$PROJECT_DIR$/static/css/custom.css" />
         <option value="$PROJECT_DIR$/config.toml" />
-        <option value="$PROJECT_DIR$/docs/about/index.html" />
-        <option value="$PROJECT_DIR$/docs/contents/index.xml" />
         <option value="$PROJECT_DIR$/docs/about/index.xml" />
+        <option value="$PROJECT_DIR$/docs/contents/index.xml" />
+        <option value="$PROJECT_DIR$/docs/about/index.html" />
       </list>
     </option>
   </component>
@@ -208,6 +201,18 @@
               <item name="KengoTeshima.github.io" type="462c0819:PsiDirectoryNode" />
               <item name="docs" type="462c0819:PsiDirectoryNode" />
               <item name="about" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KengoTeshima.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KengoTeshima.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="categories" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="KengoTeshima.github.io" type="b2602c69:ProjectViewProjectNode" />
+              <item name="KengoTeshima.github.io" type="462c0819:PsiDirectoryNode" />
+              <item name="docs" type="462c0819:PsiDirectoryNode" />
+              <item name="contents" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -264,7 +269,7 @@
       <workItem from="1583398864436" duration="597000" />
       <workItem from="1583399667432" duration="596000" />
       <workItem from="1583485204173" duration="3000" />
-      <workItem from="1585402535825" duration="2231000" />
+      <workItem from="1585402535825" duration="3282000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1581410718854</created>
@@ -396,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24025000" />
+    <option name="totallyTimeSpent" value="25076000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
@@ -540,27 +545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.toml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="140" column="24" selection-start-line="140" selection-start-column="19" selection-end-line="140" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/contents/index.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/about/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-461">
-          <caret line="12" column="45" lean-forward="true" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/docs/categories/page/1/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -574,14 +558,31 @@
     <entry file="file://$PROJECT_DIR$/docs/categories/index.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/about/index.xml">
+    <entry file="file://$PROJECT_DIR$/docs/index.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/contents/index.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="18" column="53" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+        <state relative-caret-position="272">
+          <caret line="19" selection-start-line="18" selection-start-column="54" selection-end-line="19" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/index.xml">
+    <entry file="file://$PROJECT_DIR$/docs/about/index.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="21" column="4" lean-forward="true" selection-start-line="21" selection-start-column="4" selection-end-line="21" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/about/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="202">
+          <caret line="105" column="12" lean-forward="true" selection-start-line="105" selection-start-column="12" selection-end-line="105" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/sitemap.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/docs/index.html">
@@ -591,8 +592,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/docs/sitemap.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/config.toml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="535">
+          <caret line="141" lean-forward="true" selection-start-line="141" selection-end-line="141" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
