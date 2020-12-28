@@ -112,15 +112,15 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
 
         [languages.en.menu] # It is possible to change the menu too.
 
-        [[languages.en.menu.main]]
-        name = "About"
-        weight = 1.0
-        url = "about"
-
-        [[languages.en.menu.main]]
-        name = "Contents"
-        weight = 1.0
-        url = "contents"
+#         [[languages.en.menu.main]]
+#         name = "About"
+#         weight = 1.0
+#         url = "about"
+#
+#         [[languages.en.menu.main]]
+#         name = "Contents"
+#         weight = 1.0
+#         url = "contents"
 
 
 #     [languages.ja]
