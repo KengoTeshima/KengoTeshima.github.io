@@ -5,9 +5,11 @@
     display: inline-block;
     width: 1em;
     height: 1em;
-    background-size: contain;
+    background-size: auto;
+    background-color: white;
     vertical-align: middle;
 }
+
 .icon-note:before {
     content: "";
     background-image: url("/images/note.svg");
