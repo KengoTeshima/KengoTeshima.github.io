@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20585cb0-75ee-43ad-8cda-ea327c7baf02" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/static/images/logo_symbol.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/custom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/custom.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,7 +29,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/docs/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/static/images" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -38,6 +39,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\t1480\PycharmProjects\KengoTeshima.github.io\static\images" />
       <recent name="C:\Users\t1480\PycharmProjects\KengoTeshima.github.io\docs\images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
@@ -53,7 +55,7 @@
       <option name="presentableId" value="Default" />
       <updated>1609151129048</updated>
       <workItem from="1609151130768" duration="2895000" />
-      <workItem from="1609157028653" duration="4277000" />
+      <workItem from="1609157028653" duration="4484000" />
     </task>
     <servers />
   </component>
