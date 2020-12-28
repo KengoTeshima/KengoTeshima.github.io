@@ -16,7 +16,7 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
 
 [params] # theme parameters
     author = "Kengo Teshima" # Author's name.
-    info = "Data Analyst" # Author's job title or info.
+    info = "Data Analyst/Scientist/Engineer" # Author's job title or info.
     description = "Kengo Teshima's personal website" # Site description.
     keywords = "blog,developer,personal" # Site keywords.
     avatarurl = "images/avatar.jpg" # Contain the path of the optionnal avatar in the static folder.
