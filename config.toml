@@ -89,14 +89,14 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
 #    url = "https://www.youtube.com/playlist?list=PLJ99EoR4L7qpXqnpsdYQrJe_VCxVowkko"
 
 # Menu links
-[[menu.main]]
-    name = "About"
-    weight = 2
-    url = "about"
-[[menu.main]]
-    name = "Contents"
-    weight = 2
-    url = "contents"
+# [[menu.main]]
+#     name = "About"
+#     weight = 2
+#     url = "about"
+# [[menu.main]]
+#     name = "Contents"
+#     weight = 2
+#     url = "contents"
 
 [languages]
     [languages.en]
