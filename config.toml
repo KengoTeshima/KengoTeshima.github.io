@@ -106,7 +106,7 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
         # You can configure the theme parameter for each language.
         [languages.en.params]
         author = "Kengo Teshima"
-        info = "Data Analyst"
+        info = "Data Analyst/Scientist/Engineer"
         description = "Kengo Teshima's personal website"
         keywords = "blog,developer,personal"
 
@@ -123,24 +123,24 @@ disqusShortname = "yourdiscussshortname" # Enable or disable Disqus.
         url = "contents"
 
 
-    [languages.ja]
-        languagename = "Japanese"
-        title = "手島 健吾"
-
-        [languages.ja.params]
-            author = "手島 健吾"
-            description = "手島 健吾のサイト"
-            keywords = "blog,developer, ブログ, エンジニア, データ分析"
-            info = "データアナリスト"
-
-        [languages.ja.menu]
-
-            [[languages.ja.menu.main]]
-            name = "About"
-            weight = 1.0
-            url = "about"
-
-            [[languages.ja.menu.main]]
-            name = "Contents"
-            weight = 2.0
-            url = "contents"
+#     [languages.ja]
+#         languagename = "Japanese"
+#         title = "手島 健吾"
+#
+#         [languages.ja.params]
+#             author = "手島 健吾"
+#             description = "手島 健吾のサイト"
+#             keywords = "blog,developer, ブログ, エンジニア, データ分析"
+#             info = "データアナリスト"
+#
+#         [languages.ja.menu]
+#
+#             [[languages.ja.menu.main]]
+#             name = "About"
+#             weight = 1.0
+#             url = "about"
+#
+#             [[languages.ja.menu.main]]
+#             name = "Contents"
+#             weight = 2.0
+#             url = "contents"
