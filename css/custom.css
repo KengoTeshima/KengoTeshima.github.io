@@ -5,17 +5,18 @@
     display: inline-block;
     width: 1em;
     height: 1em;
-    background-size: auto;
-    background-color: white;
+    background-size: contain;
+    background-repeat: no-repeat;
     vertical-align: middle;
 }
 
 .icon-note:before {
     content: "";
-    background-image: url("/images/note.svg");
+    background-image: url("/images/logo_symbol.png");
     display: inline-block;
     width: 1em;
     height: 1em;
-    background-size: auto;
+    background-size: contain;
+    background-repeat: no-repeat;
     vertical-align: middle;
 }
