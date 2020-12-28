@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin bash
 hugo
 git add --all
 git commit -a -m "update file"
