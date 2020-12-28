@@ -1,3 +1,4 @@
+
 .icon-qiita:before {
     content: "";
     background-image: url("/images/qiita-qiita-jobs-favicon.png");
@@ -7,7 +8,6 @@
     background-size: contain;
     vertical-align: middle;
 }
-
 .icon-note:before {
     content: "";
     background-image: url("/images/note.svg");
