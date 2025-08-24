@@ -20,3 +20,19 @@
     background-repeat: no-repeat;
     vertical-align: middle;
 }
+.feeds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.feed ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.feed li {
+  margin-bottom: 0.5rem;
+}
