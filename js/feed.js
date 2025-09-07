@@ -45,23 +45,48 @@ class FeedLoader {
     try {
       // Add timeout to prevent hanging requests
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
 
-      const response = await fetch(url, { 
-        signal: controller.signal,
-        mode: 'cors',
-        cache: 'no-cache'
-      });
+      let response;
+      let xml;
 
-      clearTimeout(timeoutId);
-
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+      // Try direct fetch first for local feeds
+      if (url.startsWith('/') || url.startsWith(window.location.origin)) {
+        response = await fetch(url, { 
+          signal: controller.signal,
+          cache: 'no-cache'
+        });
+        
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const text = await response.text();
+        const parser = new DOMParser();
+        xml = parser.parseFromString(text, 'application/xml');
+      } else {
+        // Use CORS proxy for external feeds
+        const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
+        
+        response = await fetch(proxyUrl, { 
+          signal: controller.signal,
+          cache: 'no-cache'
+        });
+        
+        if (!response.ok) {
+          throw new Error(`Proxy HTTP ${response.status}: ${response.statusText}`);
+        }
+        
+        const data = await response.json();
+        if (!data.contents) {
+          throw new Error('No content returned from proxy');
+        }
+        
+        const parser = new DOMParser();
+        xml = parser.parseFromString(data.contents, 'application/xml');
       }
 
-      const text = await response.text();
-      const parser = new DOMParser();
-      const xml = parser.parseFromString(text, 'application/xml');
+      clearTimeout(timeoutId);
       
       // Check for XML parsing errors
       const parserError = xml.querySelector('parsererror');
@@ -124,8 +149,8 @@ class FeedLoader {
         a.rel = 'noopener noreferrer';
         a.title = title;
         
-        // Truncate long titles
-        const displayTitle = title.length > 60 ? title.substring(0, 60) + '...' : title;
+        // Truncate long titles for better display
+        const displayTitle = title.length > 50 ? title.substring(0, 50) + '...' : title;
         a.textContent = displayTitle;
         
         li.appendChild(a);
@@ -151,10 +176,12 @@ class FeedLoader {
       let errorMessage = 'Unable to load content';
       if (error.name === 'AbortError') {
         errorMessage = 'Request timed out';
-      } else if (error.message.includes('Failed to fetch')) {
+      } else if (error.message.includes('Failed to fetch') || error.message.includes('Network')) {
         errorMessage = 'Network error';
       } else if (error.message.includes('CORS')) {
-        errorMessage = 'Access blocked by CORS policy';
+        errorMessage = 'Access blocked';
+      } else if (error.message.includes('Proxy')) {
+        errorMessage = 'Service temporarily unavailable';
       }
       
       this.showError(listId, errorMessage);
@@ -169,8 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load feeds with error handling
   const feeds = [
     { url: '/index.xml', listId: 'blog-feed', name: 'Blog' },
-    { url: 'https://qiita.com/ognek/feed', listId: 'qiita-feed', name: 'Qiita' },
-    { url: 'https://note.com/ognek4/rss', listId: 'note-feed', name: 'note' }
+    { url: 'https://qiita.com/teshikenn/feed', listId: 'qiita-feed', name: 'Qiita' },
+    { url: 'https://note.com/teshikenn4/rss', listId: 'note-feed', name: 'note' }
   ];
 
   feeds.forEach(feed => {
