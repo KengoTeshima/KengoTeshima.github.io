@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const feeds = [
     { url: '/index.xml', listId: 'blog-feed', name: 'Blog' },
     { url: 'https://qiita.com/ognek/feed', listId: 'qiita-feed', name: 'Qiita' },
-    { url: 'https://note.com/teshikenn/rss', listId: 'note-feed', name: 'note' }
+    { url: 'https://note.com/ognek4/rss', listId: 'note-feed', name: 'note' }
   ];
 
   feeds.forEach(feed => {
