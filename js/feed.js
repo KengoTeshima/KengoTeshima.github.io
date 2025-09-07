@@ -196,8 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Load feeds with error handling
   const feeds = [
     { url: '/index.xml', listId: 'blog-feed', name: 'Blog' },
-    { url: 'https://qiita.com/teshikenn/feed', listId: 'qiita-feed', name: 'Qiita' },
-    { url: 'https://note.com/teshikenn4/rss', listId: 'note-feed', name: 'note' }
+    { url: 'https://qiita.com/ognek/feed', listId: 'qiita-feed', name: 'Qiita' },
+    { url: 'https://note.com/teshikenn/rss', listId: 'note-feed', name: 'note' }
   ];
 
   feeds.forEach(feed => {
