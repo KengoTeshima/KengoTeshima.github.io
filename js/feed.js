@@ -193,16 +193,9 @@ class FeedLoader {
 document.addEventListener('DOMContentLoaded', () => {
   const loader = new FeedLoader();
   
-  // Load feeds with error handling
-  const feeds = [
-    { url: '/index.xml', listId: 'blog-feed', name: 'Blog' },
-    { url: 'https://qiita.com/ognek/feed', listId: 'qiita-feed', name: 'Qiita' },
-    { url: 'https://note.com/ognek4/rss', listId: 'note-feed', name: 'note' }
-  ];
-
-  feeds.forEach(feed => {
-    loader.fetchFeed(feed.url, feed.listId, 5);
-  });
+  // Load note feed only
+  const noteFeed = { url: 'https://note.com/ognek4/rss', listId: 'note-feed', name: 'note' };
+  loader.fetchFeed(noteFeed.url, noteFeed.listId, 5);
 
   // Add smooth scroll behavior for navigation
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

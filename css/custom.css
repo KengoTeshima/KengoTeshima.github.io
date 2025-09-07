@@ -52,12 +52,28 @@
 }
 
 /* ====================
-   CONTENT FEEDS GRID
+   SIMPLIFIED UPDATES LAYOUT (note + Twitter)
 ==================== */
-.content-feeds {
-    margin-bottom: 4rem;
+.updates-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    align-items: start;
 }
 
+.note-section {
+    display: flex;
+    flex-direction: column;
+}
+
+.note-card {
+    height: fit-content;
+}
+
+/* Legacy support for feeds-grid (if needed elsewhere) */
 .feeds-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -243,6 +259,12 @@
    RESPONSIVE DESIGN
 ==================== */
 @media (max-width: 768px) {
+    .updates-layout {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 0 1rem;
+    }
+    
     .feeds-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
@@ -254,7 +276,7 @@
     }
     
     .twitter-section {
-        margin: 0 1rem;
+        margin: 0;
         padding: 1.5rem;
     }
     
@@ -601,6 +623,48 @@ html {
 .feed-card:nth-child(1) { --card-accent: #28a745; }
 .feed-card:nth-child(2) { --card-accent: #55c500; }
 .feed-card:nth-child(3) { --card-accent: #00d4aa; }
+
+/* note card specific styling */
+.note-card {
+    --card-accent: #00d4aa;
+}
+
+/* Feed link styling */
+.feed-link, .twitter-link {
+    margin-top: 1.5rem;
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.feed-link a, .twitter-link a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    background: rgba(0, 123, 255, 0.05);
+}
+
+.feed-link a:hover, .twitter-link a:hover {
+    background: rgba(0, 123, 255, 0.1);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.15);
+}
+
+.twitter-link a {
+    color: #1da1f2;
+    background: rgba(29, 161, 242, 0.05);
+}
+
+.twitter-link a:hover {
+    background: rgba(29, 161, 242, 0.1);
+    box-shadow: 0 4px 12px rgba(29, 161, 242, 0.15);
+}
 
 /* ====================
    ENHANCED TWITTER SECTION
