@@ -382,11 +382,354 @@ html {
     scroll-behavior: smooth;
 }
 
+/* ====================
+   ENHANCED PROFILE SECTION
+==================== */
+.about {
+    text-align: center;
+    padding: 4rem 2rem 3rem;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.02) 0%, rgba(0, 212, 170, 0.02) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50%;
+    width: 200%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.3), transparent);
+    animation: shimmerLine 3s ease-in-out infinite;
+}
+
+@keyframes shimmerLine {
+    0%, 100% { transform: translateX(-100%); opacity: 0; }
+    50% { transform: translateX(0); opacity: 1; }
+}
+
+.about .avatar {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 2rem;
+}
+
+.about .avatar::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    background: conic-gradient(from 0deg, #007bff, #00d4aa, #007bff);
+    border-radius: 50%;
+    z-index: -1;
+    animation: rotateGradient 4s linear infinite;
+}
+
+@keyframes rotateGradient {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.about .avatar img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 6px solid #ffffff;
+    object-fit: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.about .avatar img:hover {
+    transform: scale(1.08) rotateY(5deg);
+    box-shadow: 0 20px 60px rgba(0, 123, 255, 0.2);
+}
+
+.about h1 {
+    margin: 1.5rem 0 0.5rem;
+    font-size: clamp(2rem, 5vw, 2.8rem);
+    font-weight: 700;
+    color: #1a1a1a;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    letter-spacing: -0.02em;
+}
+
+.about h2 {
+    color: #666;
+    font-weight: 400;
+    margin-bottom: 3rem;
+    font-size: clamp(1.1rem, 3vw, 1.4rem);
+    opacity: 0.8;
+    line-height: 1.4;
+}
+
+.about ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(145deg, #ffffff, #f8f9fa);
+    border-radius: 16px;
+    color: #666;
+    font-size: 1.4rem;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.08),
+        0 1px 3px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
+
+.about ul li a::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(145deg, rgba(0, 123, 255, 0.1), rgba(0, 212, 170, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.about ul li a:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 
+        0 12px 30px rgba(0, 123, 255, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.1);
+    color: #007bff;
+    border-color: rgba(0, 123, 255, 0.2);
+}
+
+.about ul li a:hover::before {
+    opacity: 1;
+}
+
+/* Platform-specific hover colors */
+.about ul li:nth-child(1) a:hover { color: #1da1f2; } /* Twitter */
+.about ul li:nth-child(2) a:hover { color: #333; }    /* GitHub */
+.about ul li:nth-child(3) a:hover { color: #0077b5; } /* LinkedIn */
+.about ul li:nth-child(4) a:hover { color: #55c500; } /* Qiita */
+.about ul li:nth-child(5) a:hover { color: #00d4aa; } /* note */
+.about ul li:nth-child(6) a:hover { color: #007bff; } /* Resume */
+
+/* ====================
+   ENHANCED LATEST UPDATES SECTION
+==================== */
+.latest-updates {
+    margin-top: 5rem;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 50%, #f8f9fa 100%);
+    position: relative;
+}
+
+.latest-updates::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0, 123, 255, 0.2), transparent);
+}
+
+.latest-updates h2::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #007bff, #00d4aa);
+    margin: 1.5rem auto 0;
+    border-radius: 2px;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.3);
+}
+
+/* ====================
+   ENHANCED CONTENT FEEDS GRID
+==================== */
+.feeds-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.feed-card {
+    background: linear-gradient(145deg, #ffffff, #fafbfc);
+    border-radius: 20px;
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.06),
+        0 2px 8px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    position: relative;
+    overflow: hidden;
+}
+
+.feed-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--card-accent, #007bff), transparent);
+    transform: translateX(-100%);
+    transition: transform 0.6s ease;
+}
+
+.feed-card:hover::before {
+    transform: translateX(100%);
+}
+
+.feed-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 
+        0 20px 60px rgba(0, 0, 0, 0.08),
+        0 8px 24px rgba(0, 0, 0, 0.06);
+    border-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Individual card accent colors */
+.feed-card:nth-child(1) { --card-accent: #28a745; }
+.feed-card:nth-child(2) { --card-accent: #55c500; }
+.feed-card:nth-child(3) { --card-accent: #00d4aa; }
+
+/* ====================
+   ENHANCED TWITTER SECTION
+==================== */
+.twitter-section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    background: linear-gradient(145deg, #ffffff, #fafbfc);
+    border-radius: 24px;
+    box-shadow: 
+        0 12px 40px rgba(29, 161, 242, 0.08),
+        0 4px 16px rgba(0, 0, 0, 0.04),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(29, 161, 242, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+.twitter-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #1da1f2, #00d4aa, #1da1f2);
+    background-size: 200% 100%;
+    animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+.twitter-header::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 60px;
+    height: 2px;
+    background: #1da1f2;
+    transform: translateX(-50%);
+    border-radius: 2px;
+}
+
+.twitter-header i {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
 /* Enhanced focus states for accessibility */
 .feed-list a:focus,
 .about ul li a:focus {
-    outline: 2px solid #007bff;
+    outline: 3px solid #007bff;
     outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* ====================
+   RESPONSIVE ENHANCEMENTS
+==================== */
+@media (max-width: 768px) {
+    .about {
+        padding: 2.5rem 1rem 2rem;
+    }
+    
+    .about .avatar img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .about ul li a {
+        width: 48px;
+        height: 48px;
+        font-size: 1.2rem;
+        border-radius: 14px;
+    }
+    
+    .feeds-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .feed-card {
+        padding: 1.8rem;
+        border-radius: 16px;
+    }
+    
+    .twitter-section {
+        margin: 0 1rem;
+        padding: 2rem 1.5rem;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .about {
+        padding: 2rem 1rem 1.5rem;
+    }
+    
+    .about .avatar img {
+        width: 90px;
+        height: 90px;
+        border: 4px solid #ffffff;
+    }
+    
+    .about ul li a {
+        width: 44px;
+        height: 44px;
+        font-size: 1.1rem;
+        border-radius: 12px;
+    }
+    
+    .feed-card {
+        padding: 1.5rem;
+    }
+    
+    .twitter-section {
+        margin: 0 0.5rem;
+        padding: 1.8rem 1.2rem;
+        border-radius: 16px;
+    }
 }
 
 /* Print styles */
@@ -401,5 +744,14 @@ html {
         break-inside: avoid;
         box-shadow: none;
         border: 1px solid #ddd;
+        background: white !important;
+    }
+    
+    .about {
+        background: white !important;
+    }
+    
+    .latest-updates {
+        background: white !important;
     }
 }
