@@ -138,49 +138,47 @@
 <section class="container latest-updates">
   <h2>Latest Updates</h2>
   
-  <!-- Content Feeds Section -->
-  <div class="content-feeds">
-    <div class="feeds-grid">
-      <div class="feed-card">
-        <div class="feed-header">
-          <i class="fas fa-blog"></i>
-          <h3>Blog</h3>
-        </div>
-        <ul id="blog-feed" class="feed-list"></ul>
-      </div>
-      
-      <div class="feed-card">
-        <div class="feed-header">
-          <i class="fab fa-qiita"></i>
-          <h3>Qiita</h3>
-        </div>
-        <ul id="qiita-feed" class="feed-list"></ul>
-      </div>
-      
-      <div class="feed-card">
+  <!-- Content and Social Layout -->
+  <div class="updates-layout">
+    <!-- note Section -->
+    <div class="note-section">
+      <div class="feed-card note-card">
         <div class="feed-header">
           <i class="fab icon-note"></i>
           <h3>note</h3>
         </div>
         <ul id="note-feed" class="feed-list"></ul>
+        <div class="feed-link">
+          <a href="https://note.com/ognek4" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-external-link-alt"></i> View all articles
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-  
-  <!-- Twitter Section -->
-  <div class="twitter-section">
-    <div class="feed-header twitter-header">
-      <i class="fab fa-twitter"></i>
-      <h3>Twitter</h3>
-    </div>
-    <div class="twitter-container">
-      <a class="twitter-timeline" 
-         data-height="400" 
-         data-theme="light" 
-         data-chrome="noheader nofooter noborders" 
-         href="https://twitter.com/teshikenn4?ref_src=twsrc%5Etfw">
-         Tweets by teshikenn4
-      </a>
+    
+    <!-- Twitter Section -->
+    <div class="twitter-section">
+      <div class="feed-header twitter-header">
+        <i class="fab fa-twitter"></i>
+        <h3>Twitter</h3>
+      </div>
+      <div class="twitter-container">
+        <a class="twitter-timeline" 
+           data-height="500" 
+           data-width="100%" 
+           data-theme="light" 
+           data-chrome="noheader nofooter transparent" 
+           data-border-color="#e1e8ed"
+           data-tweet-limit="5"
+           href="https://twitter.com/teshikenn4?ref_src=twsrc%5Etfw">
+           Loading Tweets by @teshikenn4...
+        </a>
+      </div>
+      <div class="twitter-link">
+        <a href="https://twitter.com/teshikenn4" target="_blank" rel="noopener noreferrer">
+          <i class="fab fa-twitter"></i> Follow @teshikenn4
+        </a>
+      </div>
     </div>
   </div>
 </section>
