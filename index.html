@@ -135,25 +135,53 @@
   </div>
 </section>
 
-<section class="container">
+<section class="container latest-updates">
   <h2>Latest Updates</h2>
-  <div class="feeds">
-    <div class="feed">
-      <h3>Blog</h3>
-      <ul id="blog-feed"></ul>
-    </div>
-    <div class="feed">
-      <h3>Qiita</h3>
-      <ul id="qiita-feed"></ul>
-    </div>
-    <div class="feed">
-      <h3>note</h3>
-      <ul id="note-feed"></ul>
+  
+  <!-- Content Feeds Section -->
+  <div class="content-feeds">
+    <div class="feeds-grid">
+      <div class="feed-card">
+        <div class="feed-header">
+          <i class="fas fa-blog"></i>
+          <h3>Blog</h3>
+        </div>
+        <ul id="blog-feed" class="feed-list"></ul>
+      </div>
+      
+      <div class="feed-card">
+        <div class="feed-header">
+          <i class="fab fa-qiita"></i>
+          <h3>Qiita</h3>
+        </div>
+        <ul id="qiita-feed" class="feed-list"></ul>
+      </div>
+      
+      <div class="feed-card">
+        <div class="feed-header">
+          <i class="fab icon-note"></i>
+          <h3>note</h3>
+        </div>
+        <ul id="note-feed" class="feed-list"></ul>
+      </div>
     </div>
   </div>
-  <div class="feed">
-    <h3>Twitter</h3>
-    <a class="twitter-timeline" data-height="300" href="https://twitter.com/ognek4?ref_src=twsrc%5Etfw">Tweets by ognek4</a>
+  
+  <!-- Twitter Section -->
+  <div class="twitter-section">
+    <div class="feed-header twitter-header">
+      <i class="fab fa-twitter"></i>
+      <h3>Twitter</h3>
+    </div>
+    <div class="twitter-container">
+      <a class="twitter-timeline" 
+         data-height="400" 
+         data-theme="light" 
+         data-chrome="noheader nofooter noborders" 
+         href="https://twitter.com/ognek4?ref_src=twsrc%5Etfw">
+         Tweets by ognek4
+      </a>
+    </div>
   </div>
 </section>
 
