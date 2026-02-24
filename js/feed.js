@@ -1,4 +1,96 @@
-// Feed loading functionality with improved UX
+// ============================================================
+// KENGO TESHIMA — Site JavaScript
+// Theme toggle · Scroll animations · Feed loader
+// ============================================================
+
+// ====================
+// THEME TOGGLE
+// ====================
+function initTheme() {
+  const toggle = document.getElementById('theme-toggle');
+  if (!toggle) return;
+
+  function updateToggleIcon() {
+    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+    const sunIcon = toggle.querySelector('.icon-sun');
+    const moonIcon = toggle.querySelector('.icon-moon');
+    if (sunIcon && moonIcon) {
+      sunIcon.style.display = theme === 'dark' ? 'block' : 'none';
+      moonIcon.style.display = theme === 'light' ? 'block' : 'none';
+    }
+
+    // Update Twitter embed theme if present
+    const twitterTimeline = document.querySelector('.twitter-timeline');
+    if (twitterTimeline) {
+      twitterTimeline.setAttribute('data-theme', theme);
+    }
+  }
+
+  toggle.addEventListener('click', () => {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = current === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next);
+    localStorage.setItem('theme', next);
+    updateToggleIcon();
+  });
+
+  updateToggleIcon();
+}
+
+// ====================
+// SCROLL ANIMATIONS
+// ====================
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.fade-up');
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Stagger animation for siblings
+        const delay = entry.target.dataset.delay || 0;
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, delay);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -40px 0px'
+  });
+
+  elements.forEach((el, index) => {
+    // Add stagger delay to grid children
+    const parent = el.parentElement;
+    if (parent && (parent.classList.contains('focus-grid') || parent.classList.contains('hero-grid'))) {
+      el.dataset.delay = index * 100;
+    }
+    observer.observe(el);
+  });
+}
+
+// ====================
+// SMOOTH SCROLL
+// ====================
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) {
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
+}
+
+// ====================
+// FEED LOADER (preserved from original)
+// ====================
 class FeedLoader {
   constructor() {
     this.loadingTemplate = this.createLoadingTemplate();
@@ -43,14 +135,12 @@ class FeedLoader {
     this.showLoading(listId);
     
     try {
-      // Add timeout to prevent hanging requests
       const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
+      const timeoutId = setTimeout(() => controller.abort(), 15000);
 
       let response;
       let xml;
 
-      // Try direct fetch first for local feeds
       if (url.startsWith('/') || url.startsWith(window.location.origin)) {
         response = await fetch(url, { 
           signal: controller.signal,
@@ -65,7 +155,6 @@ class FeedLoader {
         const parser = new DOMParser();
         xml = parser.parseFromString(text, 'application/xml');
       } else {
-        // Use CORS proxy for external feeds
         const proxyUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(url)}`;
         
         response = await fetch(proxyUrl, { 
@@ -88,7 +177,6 @@ class FeedLoader {
 
       clearTimeout(timeoutId);
       
-      // Check for XML parsing errors
       const parserError = xml.querySelector('parsererror');
       if (parserError) {
         throw new Error('Invalid RSS/XML format');
@@ -102,7 +190,6 @@ class FeedLoader {
         return;
       }
 
-      // Clear loading content
       list.innerHTML = '';
 
       if (items.length === 0) {
@@ -110,7 +197,6 @@ class FeedLoader {
         return;
       }
 
-      // Process and display items
       Array.from(items).slice(0, limit).forEach((item, index) => {
         const titleEl = item.querySelector('title');
         const linkEl = item.querySelector('link');
@@ -123,7 +209,6 @@ class FeedLoader {
           href = linkEl.getAttribute('href') || linkEl.textContent.trim();
         }
 
-        // Format date if available
         let dateStr = '';
         if (pubDateEl) {
           try {
@@ -149,7 +234,6 @@ class FeedLoader {
         a.rel = 'noopener noreferrer';
         a.title = title;
         
-        // Truncate long titles for better display
         const displayTitle = title.length > 50 ? title.substring(0, 50) + '...' : title;
         a.textContent = displayTitle;
         
@@ -164,7 +248,6 @@ class FeedLoader {
         
         list.appendChild(li);
 
-        // Add staggered animation
         setTimeout(() => {
           li.classList.add('fade-in');
         }, index * 100);
@@ -189,25 +272,23 @@ class FeedLoader {
   }
 }
 
-// Initialize feed loader when page loads
+// ====================
+// INITIALIZE
+// ====================
 document.addEventListener('DOMContentLoaded', () => {
-  const loader = new FeedLoader();
-  
-  // Load note feed only
-  const noteFeed = { url: 'https://note.com/ognek4/rss', listId: 'note-feed', name: 'note' };
-  loader.fetchFeed(noteFeed.url, noteFeed.listId, 5);
+  // Theme
+  initTheme();
 
-  // Add smooth scroll behavior for navigation
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      if (target) {
-        target.scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-      }
-    });
-  });
+  // Scroll animations
+  initScrollAnimations();
+
+  // Smooth scroll
+  initSmoothScroll();
+
+  // Load feeds (only on pages that have the feed)
+  const noteFeedEl = document.getElementById('note-feed');
+  if (noteFeedEl) {
+    const loader = new FeedLoader();
+    loader.fetchFeed('https://note.com/ognek4/rss', 'note-feed', 5);
+  }
 });
