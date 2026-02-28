@@ -50,7 +50,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      min-height: 60vh;
+      min-height: 65vh;
       text-align: center;
       padding: 2rem;
     }
@@ -58,27 +58,53 @@
     .error-code {
       font-size: clamp(6rem, 15vw, 10rem);
       font-weight: 800;
-      letter-spacing: -0.06em;
+      letter-spacing: -0.07em;
       line-height: 1;
       background: var(--accent-gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
+      position: relative;
+    }
+
+    /* Glow behind 404 */
+    .error-code::after {
+      content: '404';
+      position: absolute;
+      inset: 0;
+      background: var(--accent-gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      filter: blur(40px);
+      opacity: 0.25;
+      pointer-events: none;
+    }
+
+    .error-divider {
+      width: 48px;
+      height: 2px;
+      background: var(--accent-gradient);
+      border-radius: 999px;
+      margin: 1.25rem auto;
+      opacity: 0.6;
     }
 
     .error-page h2 {
       font-size: 1.5rem;
-      font-weight: 600;
+      font-weight: 700;
+      letter-spacing: -0.03em;
       color: var(--text-primary);
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
     }
 
     .error-page p {
       color: var(--text-secondary);
-      font-size: 1.05rem;
+      font-size: 1rem;
       margin-bottom: 2rem;
-      max-width: 400px;
+      max-width: 380px;
+      line-height: 1.7;
     }
   </style>
 </head>
@@ -116,15 +142,16 @@
     <div class="content">
       <section class="container error-page">
         <div class="error-code">404</div>
+        <div class="error-divider"></div>
         <h2>Page Not Found</h2>
-        <p>The page you're looking for doesn't exist or has been moved.</p>
-        <a class="primary-button" href="/">Back to Home</a>
+        <p>お探しのページは存在しないか、移動した可能性があります。</p>
+        <a class="primary-button" href="/">ホームへ戻る</a>
       </section>
     </div>
 
     <footer class="footer">
       <section class="container">
-        © 2025 Kengo Teshima
+        © 2026 Kengo Teshima
       </section>
     </footer>
 
