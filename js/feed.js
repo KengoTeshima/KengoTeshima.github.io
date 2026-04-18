@@ -19,7 +19,7 @@ function initTheme() {
       moonIcon.style.display = theme === 'light' ? 'block' : 'none';
     }
 
-    // Update Twitter embed theme if present
+    // Update X embed theme if present
     const twitterTimeline = document.querySelector('.twitter-timeline');
     if (twitterTimeline) {
       twitterTimeline.setAttribute('data-theme', theme);

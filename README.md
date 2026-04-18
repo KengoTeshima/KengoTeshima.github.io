@@ -2,16 +2,14 @@
 
 **[https://KengoTeshima.github.io/](https://KengoTeshima.github.io/)**
 
-Data Analyst / Scientist / Engineer のポートフォリオサイト。
+個人サイト — 興味と問いを起点に、領域を横断して考える。
 
 ---
 
 ## 特徴
 
-- **プロフィール**: データ領域でのスキル・経歴を紹介
-- **専門領域**: 戦略 & インサイト / ML プロダクション化 / データ体験
-- **スキルストリップ**: 使用技術をタグ形式で表示
-- **最新情報**: note RSS フィード & Twitter タイムラインを統合表示
+- **プロフィール**: 興味関心を起点とした自己紹介
+- **最新情報**: note RSS フィード & X タイムラインを統合表示
 - **ダークモード**: ライト/ダーク切り替え対応（localStorage 永続化）
 - **レスポンシブ**: モバイル・デスクトップ両対応
 - **職務経歴書**: `/resume/` ページ
@@ -34,13 +32,13 @@ Data Analyst / Scientist / Engineer のポートフォリオサイト。
 - **フォント**: Google Fonts (Inter)
 - **アイコン**: Font Awesome 6
 - **フィード取得**: RSS/Atom (note) + allorigins.win プロキシ
-- **Twitter**: 埋め込みウィジェット
+- **X**: 埋め込みウィジェット
 
 ## SNS
 
 | プラットフォーム | リンク |
 |---|---|
-| Twitter | [@teshikenn4](https://twitter.com/teshikenn4) |
+| X | [@teshikenn4](https://twitter.com/teshikenn4) |
 | GitHub | [KengoTeshima](https://github.com/KengoTeshima/) |
 | LinkedIn | [kengo-teshima](https://www.linkedin.com/in/kengo-teshima-755aa2141/) |
 | Qiita | [@ognek](https://qiita.com/ognek) |
