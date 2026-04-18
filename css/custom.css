@@ -187,6 +187,17 @@ html::after {
     vertical-align: middle;
 }
 
+.icon-youtrust::before {
+    content: "";
+    background-image: url("/images/youtrust.svg");
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+
 [data-theme="dark"] .icon-qiita::before {
     filter: brightness(1.5);
 }

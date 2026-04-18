@@ -43,6 +43,7 @@
 | LinkedIn | [kengo-teshima](https://www.linkedin.com/in/kengo-teshima-755aa2141/) |
 | Qiita | [@ognek](https://qiita.com/ognek) |
 | note | [@ognek4](https://note.com/ognek4) |
+| YOUTRUST | [teshikenn](https://youtrust.jp/users/teshikenn) |
 
 ## ディレクトリ構成
 
