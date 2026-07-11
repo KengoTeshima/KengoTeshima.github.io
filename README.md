@@ -8,22 +8,22 @@
 
 ## 特徴
 
-- **プロフィール**: 興味関心を起点とした自己紹介
+- **プロフィール**: 「判断が良くなる仕組み」を軸にした自己紹介
 - **最新情報**: note RSS フィード & X タイムラインを統合表示
+- **Thinking themes**: データ×事業、AI×商取引、行動変容、ジャズとユーモア
 - **ダークモード**: ライト/ダーク切り替え対応（localStorage 永続化）
 - **レスポンシブ**: モバイル・デスクトップ両対応
-- **職務経歴書**: `/resume/` ページ
 
 ## デザインシステム
 
 | 要素 | 詳細 |
 |------|------|
-| フォント | Inter (Google Fonts) |
-| アクセント | Sky Blue `#38bdf8` → Indigo `#818cf8` → Violet `#c084fc` |
-| 背景 (dark) | Deep Navy `#030712` + アンビエント Orb + Grain texture |
-| カード | Glassmorphism (`backdrop-filter: blur`) |
-| テクスチャ | SVG Fractal Noise grain overlay (`opacity: 0.04`) |
-| アニメーション | Intersection Observer scroll fade-up / ボタンシャイン sweep |
+| フォント | Manrope + Noto Sans JP (Google Fonts) |
+| アクセント | Signal Coral `#ff6b47` + Acid Lime `#c9f36b` |
+| 背景 (dark) | Warm Ink `#11120f` + editorial grid |
+| カード | Solid bento grid + asymmetric editorial layout |
+| イメージ | 既存ポートレートを主役にしたアーチ型フレーム |
+| アニメーション | Intersection Observer による控えめな fade-up |
 
 ## 技術スタック
 
@@ -56,7 +56,6 @@ KengoTeshima.github.io/
 ├── js/
 │   └── feed.js       # テーマ切替・スクロールアニメ・フィード取得
 ├── images/           # アバター・ファビコン等
-├── resume/           # 職務経歴書ページ
 ├── index.xml         # RSS フィード
 └── sitemap.xml       # サイトマップ
 ```
