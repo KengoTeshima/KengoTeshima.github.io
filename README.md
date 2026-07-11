@@ -8,9 +8,8 @@
 
 ## 特徴
 
-- **プロフィール**: 「判断が良くなる仕組み」を軸にした自己紹介
-- **最新情報**: note RSS フィード & X タイムラインを統合表示
-- **Thinking themes**: データ×事業、AI×商取引、行動変容、ジャズとユーモア
+- **ミニマル構成**: 名前・一文・外部リンクだけのトップページ
+- **リンク集**: X / GitHub / LinkedIn / note / YouTube
 - **ダークモード**: ライト/ダーク切り替え対応（localStorage 永続化）
 - **レスポンシブ**: モバイル・デスクトップ両対応
 
@@ -20,19 +19,16 @@
 |------|------|
 | フォント | Manrope + Noto Sans JP (Google Fonts) |
 | アクセント | Signal Coral `#ff6b47` + Acid Lime `#c9f36b` |
-| 背景 (dark) | Warm Ink `#11120f` + editorial grid |
-| カード | Solid bento grid + asymmetric editorial layout |
-| イメージ | 既存ポートレートを主役にしたアーチ型フレーム |
+| 背景 (dark) | Warm Ink `#11120f` |
+| レイアウト | 大きなタイポグラフィ + テキストリンク |
+| イメージ | なし |
 | アニメーション | Intersection Observer による控えめな fade-up |
 
 ## 技術スタック
 
 - **Static HTML/CSS/JS** — ビルドツール不使用、純粋な静的ファイル
 - **ホスティング**: GitHub Pages
-- **フォント**: Google Fonts (Inter)
-- **アイコン**: Font Awesome 6
-- **フィード取得**: RSS/Atom (note) + allorigins.win プロキシ
-- **X**: 埋め込みウィジェット
+- **フォント**: Google Fonts (Manrope / Noto Sans JP)
 
 ## SNS
 
@@ -41,9 +37,8 @@
 | X | [@teshikenn4](https://twitter.com/teshikenn4) |
 | GitHub | [KengoTeshima](https://github.com/KengoTeshima/) |
 | LinkedIn | [kengo-teshima](https://www.linkedin.com/in/kengo-teshima-755aa2141/) |
-| Qiita | [@ognek](https://qiita.com/ognek) |
 | note | [@ognek4](https://note.com/ognek4) |
-| YOUTRUST | [teshikenn](https://youtrust.jp/users/teshikenn) |
+| YouTube | [Drums playlist](https://youtube.com/playlist?list=PLJ99EoR4L7qrZxtqN10wDPz51UBpqKBsa) |
 
 ## ディレクトリ構成
 
