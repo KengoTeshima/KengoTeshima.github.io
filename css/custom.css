@@ -2608,3 +2608,223 @@ button:focus-visible {
         transform: none;
     }
 }
+
+/* ============================================================
+   KENGO TESHIMA — MINIMAL SYSTEM v4
+   Type first. No imagery. Almost no prose.
+   ============================================================ */
+
+body {
+    background: var(--bg-primary);
+}
+
+.navigation {
+    position: relative;
+    border-bottom: 1px solid var(--border-default);
+    background: var(--bg-primary);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+}
+
+.navigation .container {
+    min-height: 72px;
+}
+
+.brand-mark {
+    width: 2.15rem;
+    height: 2.15rem;
+    border: 1px solid var(--border-strong);
+    background: transparent;
+    color: var(--text-primary);
+}
+
+.theme-toggle {
+    background: transparent;
+}
+
+.minimal-hero {
+    min-height: calc(100svh - 72px);
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-default);
+}
+
+.minimal-hero-inner {
+    padding-top: clamp(4rem, 9vw, 8rem);
+    padding-bottom: clamp(4rem, 9vw, 8rem);
+}
+
+.minimal-kicker,
+.minimal-section-label {
+    color: var(--text-muted);
+    font-size: 0.68rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
+.minimal-kicker {
+    margin-bottom: clamp(2rem, 5vw, 4rem);
+}
+
+.minimal-hero h1 {
+    max-width: 12ch;
+    margin: 0;
+    font-size: clamp(5.3rem, 13.5vw, 12rem);
+    font-weight: 650;
+    line-height: 0.78;
+    letter-spacing: -0.09em;
+}
+
+.minimal-hero h1 span {
+    color: var(--accent-primary);
+}
+
+.minimal-statement {
+    margin-top: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--text-secondary);
+    font-size: clamp(1rem, 1.6vw, 1.25rem);
+    font-weight: 500;
+    letter-spacing: -0.025em;
+}
+
+.scroll-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 2rem;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--border-strong);
+    color: var(--text-primary);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.scroll-link:hover {
+    color: var(--accent-primary);
+    border-color: var(--accent-primary);
+}
+
+.minimal-links {
+    padding-top: clamp(5rem, 10vw, 9rem);
+    padding-bottom: clamp(6rem, 12vw, 11rem);
+}
+
+.minimal-section-label {
+    margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.link-list {
+    border-top: 1px solid var(--border-strong);
+}
+
+.link-row {
+    display: grid;
+    grid-template-columns: 4rem minmax(0, 1fr) minmax(10rem, 0.7fr) 3rem;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: clamp(6rem, 9vw, 8.25rem);
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border-default);
+    transition: color 0.25s ease, padding 0.35s var(--ease-out), background 0.25s ease;
+}
+
+.link-row > span:first-child {
+    color: var(--text-muted);
+    font-size: 0.64rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+}
+
+.link-row strong {
+    font-size: clamp(2rem, 4.8vw, 4.75rem);
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: -0.065em;
+}
+
+.link-row small {
+    color: var(--text-muted);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.link-row i {
+    width: 2.6rem;
+    aspect-ratio: 1;
+    display: grid;
+    place-items: center;
+    justify-self: end;
+    border: 1px solid var(--border-default);
+    border-radius: 50%;
+    color: var(--text-secondary);
+    font-style: normal;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.link-row:hover {
+    padding-inline: 1rem;
+    color: var(--accent-primary);
+    background: var(--bg-subtle);
+}
+
+.link-row:hover small,
+.link-row:hover > span:first-child {
+    color: currentColor;
+}
+
+.link-row:hover i {
+    transform: rotate(45deg);
+    border-color: currentColor;
+    color: currentColor;
+}
+
+.minimal-footer {
+    border-top: 1px solid var(--border-default);
+    background: var(--bg-secondary);
+}
+
+.minimal-footer .container {
+    min-height: 8rem;
+    display: flex;
+    align-items: center;
+    color: var(--text-muted);
+    font-size: 0.64rem;
+    letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+    .navigation .container {
+        min-height: 64px;
+    }
+
+    .minimal-hero {
+        min-height: calc(100svh - 64px);
+    }
+
+    .minimal-hero h1 {
+        font-size: clamp(4.6rem, 25vw, 7.5rem);
+        line-height: 0.82;
+    }
+
+    .link-row {
+        grid-template-columns: 2.2rem minmax(0, 1fr) 2.5rem;
+        gap: 0.8rem;
+        min-height: 6.25rem;
+    }
+
+    .link-row small {
+        display: none;
+    }
+
+    .link-row strong {
+        font-size: clamp(2.1rem, 11vw, 3.4rem);
+    }
+
+    .link-row:hover {
+        padding-inline: 0.5rem;
+    }
+}
