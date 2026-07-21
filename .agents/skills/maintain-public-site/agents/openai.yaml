@@ -1,0 +1,4 @@
+interface:
+  display_name: "Maintain Public Site"
+  short_description: "Safely review and edit this public static site"
+  default_prompt: "Review or edit this public static site while following its security and verification rules."
